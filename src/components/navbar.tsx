@@ -16,7 +16,7 @@ function Navbar() {
 						<a href="/epypage/">Home</a>
 					</li>
 					<li>
-						<a href="/epypage/loadoutgen/">Loadout generator</a>
+						<a href="/epypage/#/loadoutgen/">Loadout generator</a>
 					</li>
 				</ul>
 				<ul>
