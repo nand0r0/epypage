@@ -46,7 +46,7 @@ function Towers() {
 					<p style={{ fontSize: "80%" }}>
 						<strong>{towername}</strong>
 					</p>
-					<img src={`src/assets/IMG/${towerimage}`} alt="" />
+					<img src={import.meta.env.BASE_URL + `src/assets/IMG/${towerimage}`} alt="" />
 				</div>
 			);
 		}
@@ -112,6 +112,10 @@ function Towers() {
 				randtower = rand(randclass[1].size, randclass[1]);
 			}
 			finalList.set(randtower[0], [randtower[1], randclass[0]]);
+		}
+
+		for (let i = 0; i < 5 - towersamt; i++) {
+			finalList.set(`empty ${i + towersamt + 1}`, ["Empty.png", "empty"]);
 		}
 
 		settowerelements(convertFinalList());
