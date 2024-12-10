@@ -58,6 +58,7 @@ function Towers() {
 	}
 
 	let [towerElements, settowerelements] = useState(convertFinalList());
+	console.log(import.meta.env.BASE_URL);
 
 	useEffect(() => {
 		function doneFetching(el: {}) {
