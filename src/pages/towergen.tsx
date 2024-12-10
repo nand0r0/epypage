@@ -64,7 +64,7 @@ function Towers() {
 			Towerlist = new Map(Object.entries(el));
 		}
 
-		fetch(import.meta.env.BASE_URL + "/src/assets/towers.json")
+		fetch(import.meta.env.BASE_URL + "#/src/assets/towers.json")
 			.then((res) => {
 				return res.json();
 			})
@@ -124,7 +124,7 @@ function Towers() {
 	return (
 		<>
 			<Navbar />
-			<img src={"#" + import.meta.env.BASE_URL + "/src/assets/IMG/NewLogo.png"} alt="" />
+			<img src={import.meta.env.BASE_URL + "#/src/assets/IMG/NewLogo.png"} alt="" />
 			<br /> <br />
 			<h1>Loadout generator</h1>
 			<br /> <br />
