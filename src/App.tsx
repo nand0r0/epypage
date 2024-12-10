@@ -8,8 +8,8 @@ function App() {
 	return (
 		<main className="main-content">
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/loadoutgen" element={<Towergen />} />
+				<Route path="/epypage" element={<Home />} />
+				<Route path="/epypage/loadoutgen" element={<Towergen />} />
 			</Routes>
 		</main>
 	);
