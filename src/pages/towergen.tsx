@@ -46,7 +46,7 @@ function Towers() {
 					<p style={{ fontSize: "80%" }}>
 						<strong>{towername}</strong>
 					</p>
-					<img src={import.meta.env.BASE_URL + `src/assets/IMG/${towerimage}`} alt="" />
+					<img src={"#" + import.meta.env.BASE_URL + `src/assets/IMG/${towerimage}`} alt="" />
 				</div>
 			);
 		}
@@ -124,7 +124,7 @@ function Towers() {
 	return (
 		<>
 			<Navbar />
-			<img src={import.meta.env.BASE_URL + "/src/assets/IMG/NewLogo.png"} alt="" />
+			<img src={"#" + import.meta.env.BASE_URL + "/src/assets/IMG/NewLogo.png"} alt="" />
 			<br /> <br />
 			<h1>Loadout generator</h1>
 			<br /> <br />

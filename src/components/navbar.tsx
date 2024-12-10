@@ -8,7 +8,8 @@ function Navbar() {
 					padding: "0px 20px",
 					margin: "0px",
 					borderRadius: "6px",
-					backgroundColor: "rgb(14, 17, 24, 0.8)",
+					backgroundColor: "rgb(14, 17, 24, 0.9)",
+					zIndex: "9",
 				}}
 			>
 				<ul>
