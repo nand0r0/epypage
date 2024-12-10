@@ -9,7 +9,7 @@ function App() {
 		<main className="main-content">
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/loadoutgen" element={<Towergen />} />
+				<Route path="/loadoutgen/" element={<Towergen />} />
 			</Routes>
 		</main>
 	);
