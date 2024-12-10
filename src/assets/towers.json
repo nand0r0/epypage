@@ -1,0 +1,60 @@
+{
+	"Support": {
+		"DJ": "DJ.png",
+		"Freezer": "Freezer.png",
+		"Medic": "Medic.png",
+		"Commander": "Commander.png"
+	},
+	"Event": {
+		"Commando": "DefaultCommandoIconIGNov24.webp",
+		"Archer": "DHDefaultArcherIcon.webp",
+		"Gladiator": "GladiatorIconn.webp",
+		"Sledger": "EasterSledger_Icon.webp",
+		"Swarmer": "NewDefaultSwarmerIcon.webp",
+		"Toxic gunner": "ToxicGIcon.webp",
+		"Slasher": "HW24DefaultSlasherIconIG.webp",
+		"Cryomancer": "CryomancerIcon.webp",
+		"Necromancer": "NecromancerTowerIcon.webp",
+		"Jester": "JesterIcon.webp",
+		"Elf camp": "Elf_Camp_Tower_Icon.webp",
+		"Harvester": "DefaultHarvesterIconIG.webp",
+		"Executioner": "DefaultExecutioner2.webp",
+		"Hallow punk": "DefaultHallowPunkIconIG.webp"
+	},
+	"Starter": {
+		"Scout": "Scout.png",
+		"Sniper": "Sniper.png",
+		"Demoman": "DefaultDemomanIcon2.webp",
+		"Paintballer": "NewPaintballerIcon.webp",
+		"Soldier": "KrampusRevengeSoldierIcon.webp"
+	},
+	"Intermediate": {
+		"Trapper": "TrapperIcon.webp",
+		"Rocketeer": "NewDefaultRocketeerIcon.webp",
+		"Shotgunner": "EasterShotgunner_Icon.webp",
+		"Farm": "DefaultFarmIcon.webp",
+		"Militant": "EasterMilitant_Icon.webp",
+		"Wardern": "Warden.webp",
+		"Electroshocker": "DefaultElectroshockerIcon2.webp"
+	},
+	"Level": {
+		"Crook boss": "CrookBoss.png",
+		"Mercenary base": "Mercenary_base_image.webp",
+		"Mortar": "MortarIcon.webp",
+		"Turret": "DefaultTurretIcon.webp",
+		"Pursuit": "DefaultPursuitIconIGNov24.webp"
+	},
+	"Hardcore": {
+		"Engineer": "Engineer.png",
+		"Accelerator": "Accelerator.png",
+		"Brawler": "Brawler.png"
+	},
+	"Golden": {
+		"Golden minigunner": "Goldenminigunner.webp",
+		"Golden cowboy": "WDGoldenCowboyIcon.webp",
+		"Golden crook boss": "NewGoldenCrookBoss.webp",
+		"Golden soldier": "KR_Golden_Soldier_Icon.webp",
+		"Golden pyromancer": "DHGoldenPyroIcon.webp",
+		"Golden scout": "GoldenScout3.webp"
+	}
+}

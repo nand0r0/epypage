@@ -1,0 +1,80 @@
+@import "../../node_modules/@picocss/pico/scss/pico";
+
+$easing: 0.1s ease-in-out;
+
+#towers {
+	width: min(100%, 1000px);
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 5px;
+	align-items: center;
+	div {
+		width: 175px;
+		height: 175px;
+
+		margin: auto;
+		border: 5px solid rgb(14, 17, 24);
+		border-radius: 7px;
+		img {
+			width: 70%;
+			height: 70%;
+			margin-top: 10px;
+		}
+		p {
+			background-color: rgb(14, 17, 24, 0.5);
+			margin-bottom: 0px;
+		}
+	}
+	div:hover {
+		transform: scale(1.1, 1.1);
+		transition: transform $easing;
+	}
+}
+
+button {
+	transform: scale(1, 1);
+	transition: $easing;
+}
+
+button:hover {
+	transform: scale(1.1, 1.1);
+	transition: $easing;
+}
+
+button:active {
+	transform: scale(0.9, 0.9);
+	transition: $easing;
+}
+
+#slide {
+	width: min(400px, 100%);
+}
+
+.Event {
+	border-color: #ad5550;
+	background-color: #d97771;
+}
+.Level {
+	border-color: #4c68ad;
+	background-color: #6788db;
+}
+.Hardcore {
+	border-color: #6847b5;
+	background-color: #845be3;
+}
+.Support {
+	border-color: #39a350;
+	background-color: #4cd46a;
+}
+.Starter {
+	border-color: #9c9c9c;
+	background-color: #cfcfcf;
+}
+.Intermediate {
+	border-color: #4599a1;
+	background-color: #5ecdd6;
+}
+
+.Golden {
+	background-color: #c99720;
+}
