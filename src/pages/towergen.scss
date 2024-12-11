@@ -1,6 +1,8 @@
 @import "../../node_modules/@picocss/pico/scss/pico";
 
-$easing: 0.1s ease-in-out;
+$easing: 0.08s;
+$scalebig: 1.05;
+$scalesmall: 0.95;
 
 #towers {
 	width: min(100%, 1000px);
@@ -11,7 +13,7 @@ $easing: 0.1s ease-in-out;
 	div {
 		width: 175px;
 		height: 175px;
-
+		transition: transform $easing;
 		margin: auto;
 		border: 5px solid rgb(14, 17, 24);
 		border-radius: 7px;
@@ -26,24 +28,11 @@ $easing: 0.1s ease-in-out;
 		}
 	}
 	div:hover {
-		transform: scale(1.1, 1.1);
-		transition: transform $easing;
+		transform: scale($scalebig, $scalebig);
 	}
-}
-
-button {
-	transform: scale(1, 1);
-	transition: $easing;
-}
-
-button:hover {
-	transform: scale(1.1, 1.1);
-	transition: $easing;
-}
-
-button:active {
-	transform: scale(0.9, 0.9);
-	transition: $easing;
+	div:active {
+		transform: scale($scalesmall, $scalesmall);
+	}
 }
 
 #slide {

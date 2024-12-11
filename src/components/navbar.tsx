@@ -19,6 +19,7 @@ function Navbar() {
 					<li>
 						<a href="/epypage/#/loadoutgen/">Loadout generator</a>
 					</li>
+					<li>{import.meta.env.BASE_URL}</li>
 				</ul>
 				<ul>
 					<li>

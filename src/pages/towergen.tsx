@@ -38,15 +38,27 @@ function Towers() {
 	let finalList: Map<string, [string, string]> = new Map();
 	let [towersamt, settowersamt] = useState(5);
 
+	function removeGolden(towerName: string) {
+		if (towerName.includes("Golden")) {
+			return towerName.replace("Golden ", "");
+		}
+		return towerName;
+	}
+
+	function replaceTower(towerName: string) {}
+
 	function convertFinalList() {
 		let idxarray = [];
 		for (let [towername, [towerimage, towerclass]] of finalList) {
+			if (towerclass == "Golden") {
+				towername = "Golden " + towername;
+			}
 			idxarray.push(
-				<div key={towername} className={towerclass}>
+				<div key={towername} className={towerclass} onClick={() => console.log(removeGolden(towername))}>
 					<p style={{ fontSize: "80%" }}>
 						<strong>{towername}</strong>
 					</p>
-					<img src={"#" + import.meta.env.BASE_URL + `src/assets/IMG/${towerimage}`} alt="" />
+					<img src={import.meta.env.BASE_URL + `/src/assets/IMG/${towerimage}`} alt="" />
 				</div>
 			);
 		}
@@ -58,19 +70,14 @@ function Towers() {
 	}
 
 	let [towerElements, settowerelements] = useState(convertFinalList());
-	console.log(import.meta.env.BASE_URL);
 
 	useEffect(() => {
-		function doneFetching(el: {}) {
-			Towerlist = new Map(Object.entries(el));
-		}
-
-		fetch(import.meta.env.BASE_URL + "#/src/assets/towers.json")
+		fetch(import.meta.env.BASE_URL + "/src/assets/towers.json")
 			.then((res) => {
 				return res.json();
 			})
 			.then((data) => {
-				doneFetching(data);
+				Towerlist = new Map(Object.entries(data));
 			});
 	});
 
@@ -104,7 +111,9 @@ function Towers() {
 		}
 
 		for (let i = 0; i < towersamt; i++) {
+			//[Tower class, Map([[Tower name, Tower image]])]
 			let randclass: [string, Map<string, string>] = rand(idxlist.length, idxlist);
+
 			//[tower name, tower image]
 			let randtower: [string, string] = rand(randclass[1].size, randclass[1]);
 
@@ -125,7 +134,7 @@ function Towers() {
 	return (
 		<>
 			<Navbar />
-			<img src={import.meta.env.BASE_URL + "#/src/assets/IMG/NewLogo.png"} alt="" />
+			<img src={import.meta.env.BASE_URL + "/src/assets/IMG/NewLogo.png"} alt="" />
 			<br /> <br />
 			<h1>Loadout generator</h1>
 			<br /> <br />
@@ -139,7 +148,9 @@ function Towers() {
 				Amount of towers generated: {towersamt}
 				<input type="range" min={1} max={5} value={towersamt} onChange={(e) => settowersamt(+e.target.value)} />
 			</label>
-			<button onClick={clicked}>Generate</button>
+			<button onClick={clicked} id="mainButton">
+				Generate
+			</button>
 			<br />
 			<br />
 			<article className="container-fluid" id="towers">
@@ -150,5 +161,3 @@ function Towers() {
 }
 
 export default Towers;
-
-//make a new project with a new repo and just add the components

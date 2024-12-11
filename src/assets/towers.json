@@ -50,11 +50,11 @@
 		"Brawler": "Brawler.png"
 	},
 	"Golden": {
-		"Golden minigunner": "Goldenminigunner.webp",
-		"Golden cowboy": "WDGoldenCowboyIcon.webp",
-		"Golden crook boss": "NewGoldenCrookBoss.webp",
-		"Golden soldier": "KR_Golden_Soldier_Icon.webp",
-		"Golden pyromancer": "DHGoldenPyroIcon.webp",
-		"Golden scout": "GoldenScout3.webp"
+		"Minigunner": "Goldenminigunner.webp",
+		"Cowboy": "WDGoldenCowboyIcon.webp",
+		"Crook boss": "NewGoldenCrookBoss.webp",
+		"Soldier": "KR_Golden_Soldier_Icon.webp",
+		"Pyromancer": "DHGoldenPyroIcon.webp",
+		"Scout": "GoldenScout3.webp"
 	}
 }
