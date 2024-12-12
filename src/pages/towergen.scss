@@ -4,6 +4,11 @@ $easing: 0.08s;
 $scalebig: 1.05;
 $scalesmall: 0.95;
 
+html,
+body {
+	user-select: none;
+}
+
 #towers {
 	width: min(100%, 1000px);
 	display: flex;
@@ -29,10 +34,33 @@ $scalesmall: 0.95;
 	}
 	div:hover {
 		transform: scale($scalebig, $scalebig);
+		cursor: pointer;
 	}
 	div:active {
 		transform: scale($scalesmall, $scalesmall);
 	}
+}
+
+.mainImg {
+	transition: filter 0.2s;
+}
+
+button {
+	transition: transform $easing !important;
+}
+
+button:hover {
+	filter: drop-shadow(0 0 5px rgba(9, 73, 110, 0.8));
+	transform: scale($scalebig, $scalebig);
+	transition: transform calc($easing/2) !important;
+}
+
+button:active {
+	transform: scale($scalesmall, $scalesmall);
+}
+
+.mainImg:hover {
+	filter: drop-shadow(0 0 10px rgba(9, 73, 110, 0.8));
 }
 
 #slide {

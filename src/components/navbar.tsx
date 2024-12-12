@@ -1,3 +1,5 @@
+import "./navbar.scss";
+
 function Navbar() {
 	return (
 		<>
@@ -19,12 +21,16 @@ function Navbar() {
 					<li>
 						<a href="/epypage/#/loadoutgen/">Loadout generator</a>
 					</li>
-					<li>{import.meta.env.BASE_URL}</li>
 				</ul>
 				<ul>
 					<li>
 						<a href="https://github.com/nand0r0" target="blank">
 							GitHub
+						</a>
+					</li>
+					<li>
+						<a href="https://react.dev/" target="blank">
+							<img src={import.meta.env.BASE_URL + "/src/assets/React.svg"} className="rotate" alt="" />
 						</a>
 					</li>
 				</ul>

@@ -1,7 +1,9 @@
 import Navbar from "../components/navbar";
+import Experience from "../components/expElements";
+import "./home.scss";
 
 function Home() {
-	const experiences = [
+	const experiences: [string, string, number][] = [
 		["JavaScript/TypeScript", "2 Years", 70],
 		["Python", "Half a year", 40],
 		["React", "Just started", 20],
@@ -9,26 +11,7 @@ function Home() {
 		["Java", "Just started", 5],
 	];
 
-	const listitems = experiences.map((item) => (
-		<tr className="grid" key={item[0]}>
-			<td>
-				<strong>{item[0]}:</strong> {item[1]}
-				<div style={{ display: "flex", alignItems: "center" }}>
-					<progress
-						id="prog"
-						value={item[2]}
-						max={100}
-						style={{
-							width: "100%",
-							verticalAlign: "center",
-							margin: "0px 10px -3px 0px",
-						}}
-					></progress>
-					{item[2]}%
-				</div>
-			</td>
-		</tr>
-	));
+	const listitems = experiences.map((item) => <Experience key={item[0]} name={item[0]} amt={item[1]} perc={item[2]} />);
 
 	return (
 		<>
