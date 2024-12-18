@@ -21,7 +21,10 @@ function Home() {
 				<div className="container-fluid grid">
 					<div>
 						<h4>Nand0r0</h4>
-						<p style={{ textAlign: "left" }}>Hi! I'm Nand0r0, and this is my website. I have 2 years of experience in basic JavaScript from logiscool, and another 2 years from myself.</p>
+						<p style={{ textAlign: "left" }}>
+							Hi! I'm Nand0r0, and this is my website. I have 2 years of experience in basic JavaScript from logiscool, and another 2 years from myself. Im curently in high school and wanting to learn
+							a full-stack framework and java.
+						</p>
 					</div>
 					<table style={{ width: "100%", margin: "auto" }}>
 						<thead>

@@ -20,9 +20,9 @@ function listitems() {
 		obj.set(element[0], true);
 	});
 
-	const [dataval, setdataval] = useState(obj);
+	let [dataval, setdataval] = useState(obj);
 
-	const Listitems = options.map((item) => (
+	let Listitems = options.map((item) => (
 		<label key={item[0]}>
 			<input type="checkbox" name={item[0]} checked={dataval.get(item[0])} onChange={(e) => setdataval((map) => new Map(map.set(item[0], e.target.checked)))} />
 			include <span data-tooltip={item[1]}> {item[0]}</span> towers
@@ -45,8 +45,6 @@ function Towers() {
 		return towerName;
 	}
 
-	function replaceTower(towerName: string) {}
-
 	function convertFinalList() {
 		let idxarray = [];
 		for (let [towername, [towerimage, towerclass]] of finalList) {
@@ -54,8 +52,8 @@ function Towers() {
 				towername = "Golden " + towername;
 			}
 			idxarray.push(
-				<div key={towername} className={towerclass} onClick={() => console.log(removeGolden(towername))}>
-					<p style={{ fontSize: "80%" }}>
+				<div key={towername} className={towerclass} onClick={() => clicked(removeGolden(towername))}>
+					<p style={{ fontSize: "80%", userSelect: "none" }}>
 						<strong>{towername}</strong>
 					</p>
 					<img draggable="false" src={import.meta.env.BASE_URL + `/src/assets/IMG/${towerimage}`} alt="" />
@@ -81,8 +79,7 @@ function Towers() {
 			});
 	});
 
-	function clicked() {
-		finalList = new Map();
+	function clicked(Tname: string) {
 		let idxlist = [];
 
 		function rand(range: number, obj: any) {
@@ -109,6 +106,26 @@ function Towers() {
 				idxlist.push(convertToMap(i));
 			}
 		}
+
+		if (Tname != "") {
+			console.log(Tname, finalList.get(Tname));
+
+			let randclass: [string, Map<string, string>] = rand(idxlist.length, idxlist);
+
+			//[tower name, tower image]
+			let randtower: [string, string] = rand(randclass[1].size, randclass[1]);
+
+			while (Array.from(finalList.keys()).includes(randtower[0])) {
+				randclass = rand(idxlist.length, idxlist);
+				randtower = rand(randclass[1].size, randclass[1]);
+			}
+
+			//finalList.set(Tname, [randtower[1], randclass[0]]);
+			//settowerelements(convertFinalList());
+			return;
+		}
+
+		finalList = new Map();
 
 		for (let i = 0; i < towersamt; i++) {
 			//[Tower class, Map([[Tower name, Tower image]])]
@@ -150,7 +167,7 @@ function Towers() {
 				Amount of towers generated: {towersamt}
 				<input type="range" min={1} max={5} value={towersamt} onChange={(e) => settowersamt(+e.target.value)} />
 			</label>
-			<button onClick={clicked} id="mainButton">
+			<button onClick={() => clicked("")} id="mainButton">
 				Generate
 			</button>
 			<br />

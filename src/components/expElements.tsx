@@ -10,8 +10,8 @@ function Experience({ name, amt, perc }: Types) {
 	let [percentage, setPercentage] = useState(0);
 
 	setTimeout(() => {
-		setPercentage((prev) => perc + (perc - prev) / 10);
-	}, 10);
+		setPercentage((prev) => prev + (perc - prev) / 15);
+	}, 55);
 
 	return (
 		<tr className="grid">
