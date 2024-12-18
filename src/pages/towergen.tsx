@@ -56,7 +56,7 @@ function Towers() {
 					<p style={{ fontSize: "80%", userSelect: "none" }}>
 						<strong>{towername}</strong>
 					</p>
-					<img draggable="false" src={import.meta.env.BASE_URL + `/src/assets/IMG/${towerimage}`} alt="" />
+					<img draggable="false" src={import.meta.env.BASE_URL + `#/loadoutgen/src/assets/IMG/${towerimage}`} alt="" />
 				</div>
 			);
 		}
@@ -70,7 +70,7 @@ function Towers() {
 	let [towerElements, settowerelements] = useState(convertFinalList());
 
 	useEffect(() => {
-		fetch(import.meta.env.BASE_URL + "/src/assets/towers.json")
+		fetch(import.meta.env.BASE_URL + "#/loadoutgen/src/assets/towers.json")
 			.then((res) => {
 				return res.json();
 			})
