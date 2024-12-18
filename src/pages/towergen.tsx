@@ -152,7 +152,7 @@ function Towers() {
 		<>
 			<Navbar />
 			<a href="https://www.roblox.com/games/3260590327" target="blank">
-				<img src={import.meta.env.BASE_URL + "/src/assets/IMG/NewLogo.png"} alt="" className="mainImg" />
+				<img src={import.meta.env.BASE_URL + "#/src/assets/IMG/NewLogo.png"} alt="" className="mainImg" />
 			</a>
 			<br /> <br />
 			<h1>Loadout generator</h1>
